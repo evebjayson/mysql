@@ -1,4 +1,3 @@
-import paramiko
 import pymysql
 import datetime
 from logger import Log
@@ -7,8 +6,8 @@ from logger import Log
 
 class SynchronizeData():
     def __init__(self):
-        self.time = datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%dT%H:%M:%SZ')
-        self.ssh = paramiko.SSHClient()
+        # self.time = datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%dT%H:%M:%SZ')
+        # self.ssh = paramiko.SSHClient()
         self.log = Log()
         self.db = pymysql.connect(host="172.16.129.40", port=3306, user="root", password="root@123",charset='utf8')
         self.cursor = self.db.cursor()
