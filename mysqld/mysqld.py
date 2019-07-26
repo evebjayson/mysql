@@ -38,7 +38,7 @@ class SynchronizeData():
             else:
                 print("同步数据正常,状态正常")
                 self.log.info("同步数据正常,无错误日志")
-            self.ssh.close()  # 关闭
+            # self.ssh.close()  # 关闭
         except Exception as e:
             print(e)
             self.db.rollback() # 出现异常，回滚
